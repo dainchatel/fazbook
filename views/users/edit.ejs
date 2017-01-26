@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit <%= user.firstName %></title>
+</head>
+<body>
+
+<form action="<%= '/users/' + user.id + '?_method=PUT' %>" method='POST'>
+  <label name='email'>E-mail
+    <input value="<%= user.email %>" type='text' name='email' />
+  </label>
+    <label name='firstName'>First
+    <input value="<%= user.firstName %>" type='text' name='firstName' />
+  </label>
+    <label name='lastName'>Last
+    <input value="<%= user.lastName %>" type='text' name='lastName' />
+  </label>
+    <label name='dob'>dob
+    <input value="<%= user.dob %>" type='date' name='dob' />
+  </label>
+  <input type='submit' />
+</form>
+
+
+</body>
+</html>
